@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 		// egyszer-egyszer -- a szülőben a gyermek processz azonosítójával, a gyermekben 0 értékkel.
 		if (fork() == 0)
 		{
-			// A fork értéke 0, tehát a gyerekben vagyunk, kiírjuk az eredményt:
+			// A fork értéke 0, tehát a gyermekben vagyunk, kiírjuk az eredményt:
 			printf("%d:%f\n", i + 1, vec1[i] * vec2[i]);
 			// Kiugrunk a for ciklusból.
 			// Ha nem tennénk, a gyermek (is) folytatná a ciklust, azaz processzeket akarna létrehozni,
