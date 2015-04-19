@@ -62,6 +62,8 @@ int main(int argc, char *argv[])
 	}
 
 	// Felszabadítjuk a dinamikusan foglalt (heap-en lévő) memóriát.
+	// (Forkolásnál a szülő processz memóriája lemásolódik, így a dinamikusan létrehozott
+	// memóriaterületek is, amiket minden processzben külön-külön fel kell szabadítani.)
 	free(vec1);
 	free(vec2);
 
